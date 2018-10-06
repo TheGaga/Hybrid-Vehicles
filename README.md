@@ -1,7 +1,7 @@
 # Hybrid vehicles: real-time management of motor coupling
 The aim of this project was to determine how to balance thermal and electric motors in a hybrid vehicle in order to limit petrol consumption. The algorithms were tested on the [New European Driving Cycle (NEDC)](https://en.wikipedia.org/wiki/New_European_Driving_Cycle) using the characteristics of a Renault Clio iii (2) collection 1.2 16v 75 zen 3p (Citadines). The NEDC is designed to assess car engine emission levels and fuel economy in passenger cars.
 
-<center><img src="IMG/New_European_Driving_Cycle.png" width="800/"></center>
+<img src="IMG/New_European_Driving_Cycle.png" width="600/">
 
 ## Why use a hybrid vehicle?
 <center>
@@ -19,7 +19,7 @@ Combining a combustion engine with an electric motor gets the best of both world
 
 In particular, whilst electric motors are efficient at low speeds, combustion engines are better at high speeds as evidence by the following diagram displaying energy consumption as a function of the applied torque and rpm. Generally speaking, energy consumption is an increasing function of torque and thus of speed assuming the driver stays between 2000 and 3000 rpm as recommended by car manufacturers.
 
-<img src="IMG/Engine_mapping.png" width="300/">
+<img src="IMG/Engine_mapping.png" width="600/">
 
 ## Algorithm 1 - rule-based workload distribution
 Here we designed a real-time algorithm for balancing the power between the thermal and electic motors. The exact driving path is not known beforehand.
@@ -44,23 +44,23 @@ Reduce energy consumption by 30% on a unknown trip.
 
 The algorithm can be summarised as follows.
 
-<img src="IMG/Rule_based_algorithm.png" width="300/">
+<img src="IMG/Rule_based_algorithm.png" width="600/">
 
 
 #### Results
 We tested our algorithm on the NEDC.
 
-<img src="IMG/Torque_distribution_rule_based.png" width="300/">
+<img src="IMG/Torque_distribution_rule_based.png" width="600/">
 
 The numbers indicate the type of rule being used at the time. At low speeds, the electric motor (blue) is used most of the time whereas the combustion engine (red) takes over at higher speeds. The electric motor exerces a negative torque during deceleration in order to recharge the battery. Interestingly, in some cases (2), the combustion engine gains from working in a higher regime and recharges the battery at the same time as the electric motor counteracts excess torque.
 
 To understand how this algorithm saves fuel we compared the energy consumption map of the combustion engine in the case of a classic car and in the case of a hybrid vehicle using our algorithm.
 
 ###### Consumption using a combustion engine only
-<img src="IMG/Map_thermic.png" width="300/">
+<img src="IMG/Map_thermic.png" width="600/">
 
 ###### Consumption for a hybrid vehicle using a rule-based algorithm
-<img src="IMG/Map_hybrid.png" width="300/">
+<img src="IMG/Map_hybrid.png" width="600/">
 
 In hybrid mode, the high energy consumption areas are avoided whilst the engine seems to be working more regularly in high efficiency zones (blue). __Overall, using this algorithm, we save 30% of fuel on the NEDC.__
 
@@ -73,16 +73,16 @@ The coupling efficacy was calculated at each point of the itinerary and we then 
 
 The algorithm can be summarised as follows.
 
-<img src="IMG/Greedy_algorithm.png" width="300/">
+<img src="IMG/Greedy_algorithm.png" width="600/">
 
 ### Results
 Here we show the calculated *coupling efficacy* as well as the torque distribution between both motors.
 
 #### Efficacy
-<img src="IMG/Efficacy.png" width="300/">
+<img src="IMG/Efficacy.png" width="600/">
 
 #### Torque distribution
-<img src="IMG/Torque_distribution_greedy.png" width="300/">
+<img src="IMG/Torque_distribution_greedy.png" width="600/">
 
 
 As in our decision based algorithm, the electric motor is essentially used at low speeds. However, the combustion engine also kicks in at certain points to reduce battery consumption. In addition, at high speeds, the electric motor goes into regenerative mode in order to have sufficient battery to help out during the accelerations. __Overall, using this algorithm, we save 38% of fuel on the NEDC.__ 
