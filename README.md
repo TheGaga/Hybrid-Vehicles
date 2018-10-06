@@ -17,7 +17,7 @@ Combining a combustion engine with an electric motor gets the best of both world
 
 In particular, whilst electric motors are efficient at low speeds, combustion engines are better at high speeds as evidence by the following diagram displaying energy consumption as a function of the applied torque and rpm. Generally speaking, energy consumption is an increasing function of torque and thus of speed assuming the driver stays between 2000 and 3000 rpm as recommended by car manufacturers.
 
-<img src="IMG/Engine_mapping.png" width="600/">
+<img src="IMG/Engine_mapping.png" width="400/">
 
 ## Algorithm 1 - rule-based workload distribution
 Here we designed a real-time algorithm for balancing the power between the thermal and electic motors. The exact driving path is not known beforehand.
