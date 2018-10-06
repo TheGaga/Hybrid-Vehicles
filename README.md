@@ -8,7 +8,7 @@ The aim of this project was to determine how to balance thermal and electric mot
 |               | Efficient at high speed | Efficient at low speeds             |
 |               |                         | Instant start                       |
 |               |                         | Long motor life cycle (> 100000 km) |
-|__Disadvantages __| Pollution               | Low battery autonomy (100km)        |
+|__Disadvantages__| Pollution               | Low battery autonomy (100km)        |
 |               | Loud                    | Low battery life                    |
 
 Combining a combustion engine with an electric motor gets the best of both worlds if done well.
