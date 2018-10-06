@@ -1,7 +1,7 @@
 # Hybrid vehicles: real-time management of motor coupling
 The aim of this project was to determine how to balance thermal and electric motors in a hybrid vehicle in order to limit petrol consumption. The algorithms were tested on the [New European Driving Cycle (NEDC)](https://en.wikipedia.org/wiki/New_European_Driving_Cycle) using the characteristics of a Renault Clio iii (2) collection 1.2 16v 75 zen 3p (Citadines). The NEDC is designed to assess car engine emission levels and fuel economy in passenger cars.
 
-<img src="IMG/New_European_Driving_Cycle.png" width="500/">
+<center><img src="IMG/New_European_Driving_Cycle.png" width="1000/"></center>
 
 ## Why use a hybrid vehicle?
 |               | Combustion engine       | Electric motors                     |
