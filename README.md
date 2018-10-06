@@ -1,5 +1,7 @@
 # Hybrid vehicles: real-time management of motor coupling
-The aim of this project was to determine how to balance thermal and electric motors in a hybrid vehicle in order to limit petrol consumption. The algorithms were tested on the New European Driving Cycle (NEDC) developed in 2014 using the characteristics of a Renault Clio iii (2) collection 1.2 16v 75 zen 3p (Citadines).
+The aim of this project was to determine how to balance thermal and electric motors in a hybrid vehicle in order to limit petrol consumption. The algorithms were tested on the [New European Driving Cycle (NEDC)]<https://en.wikipedia.org/wiki/New_European_Driving_Cycle> developed in 2014 using the characteristics of a Renault Clio iii (2) collection 1.2 16v 75 zen 3p (Citadines).
+
+<img src="IMG/New_European_Driving_Cycle.png" width="300/">
 
 ## Why use a hybrid vehicle?
 |               | Combustion engine       | Electric motors                     |
@@ -15,7 +17,7 @@ Combining a combustion engine with an electric motor gets the best of both world
 
 In particular, whilst electric motors are efficient at low speeds, combustion engines are better at high speeds as evidence by the following diagram displaying energy consumption as a function of the applied torque and rpm. Generally speaking, energy consumption is an increasing function of torque and thus of speed assuming the driver stays between 2000 and 3000 rpm as recommended by car manufacturers.
 
-Insert IMAGE
+<img src="IMG/Engine_Mapping.png" width="300/">
 
 ## Algorithm 1 - rule-based workload distribution
 Here we designed a real-time algorithm for balancing the power between the thermal and electic motors. The exact driving path is not known beforehand.
@@ -41,14 +43,17 @@ Reduce energy consumption by 30% on a unknown trip.
 #### Results
 We tested our algorithm on the NEDC.
 
-INSERT IMAGE
+<img src="IMG/Torque_distribution_rule_based.png" width="300/">
 
 The numbers indicate the type of rule being used at the time. At low speeds, the electric motor (blue) is used most of the time whereas the combustion engine (red) takes over at higher speeds. The electric motor exerces a negative torque during deceleration in order to recharge the battery. Interestingly, in some cases (2), the combustion engine gains from working in a higher regime and recharges the battery at the same time as the electric motor counteracts excess torque.
 
 To understand how this algorithm saves fuel we compared the energy consumption map of the combustion engine in the case of a classic car and in the case of a hybrid vehicle using our algorithm.
 
-INSERT IMAGE
+###### Consumption using a combustion engine only
+<img src="IMG/Map_thermic.png" width="300/">
 
+###### Consumption for a hybrid vehicle using a rule-based algorithm
+<img src="IMG/Map_hybrid.png" width="300/">
 
 In hybrid mode, the high energy consumption areas are avoided whilst the engine seems to be working more regularly in high efficiency zones (blue). __Overall, using this algorithm, we save 30% of fuel on the NEDC.__
 
@@ -59,7 +64,7 @@ We defined a new metric called *coupling efficacy* as the ratio of the possible 
 
 The coupling efficacy was calculated at each point of the itinerary and we then applied a greedy algorithm to determine at which points we should use the electric motor.
 
-INSERT IMAGE
+<img src="IMG/Efficacy.png" width="300/">
 
 ### Results
 Here we show the calculated *coupling efficacy* as well as the torque distribution between both motors.
