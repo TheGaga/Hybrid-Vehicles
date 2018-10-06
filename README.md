@@ -1,5 +1,5 @@
 # Hybrid vehicles: real-time management of motor coupling
-The aim of this project was to determine how to balance thermal and electric motors in a hybrid vehicle in order to limit petrol consumption. The algorithms were tested on the [New European Driving Cycle (NEDC)]<https://en.wikipedia.org/wiki/New_European_Driving_Cycle> developed in 2014 using the characteristics of a Renault Clio iii (2) collection 1.2 16v 75 zen 3p (Citadines).
+The aim of this project was to determine how to balance thermal and electric motors in a hybrid vehicle in order to limit petrol consumption. The algorithms were tested on the [New European Driving Cycle (NEDC)](https://en.wikipedia.org/wiki/New_European_Driving_Cycle) developed in 2014 using the characteristics of a Renault Clio iii (2) collection 1.2 16v 75 zen 3p (Citadines).
 
 <img src="IMG/New_European_Driving_Cycle.png" width="300/">
 
@@ -40,6 +40,11 @@ Reduce energy consumption by 30% on a unknown trip.
 
 * Battery charge/decharge: battery level cannot go below 10% except in acceleration phase
 
+The algorithm can be summarised as follows.
+
+<img src="IMG/Rule_based_algorithm.png" width="300/">
+
+
 #### Results
 We tested our algorithm on the NEDC.
 
@@ -64,14 +69,19 @@ We defined a new metric called *coupling efficacy* as the ratio of the possible 
 
 The coupling efficacy was calculated at each point of the itinerary and we then applied a greedy algorithm to determine at which points we should use the electric motor.
 
-<img src="IMG/Efficacy.png" width="300/">
+The algorithm can be summarised as follows.
+
+<img src="IMG/Greedy_algorithm.png" width="300/">
 
 ### Results
 Here we show the calculated *coupling efficacy* as well as the torque distribution between both motors.
 
-INSERT IMAGE
+#### Efficacy
+<img src="IMG/Efficacy.png" width="300/">
 
-INSERT IMAGE
+#### Torque distribution
+<img src="IMG/Torque_distribution_greedy.png" width="300/">
+
 
 As in our decision based algorithm, the electric motor is essentially used at low speeds. However, the combustion engine also kicks in at certain points to reduce battery consumption. In addition, at high speeds, the electric motor goes into regenerative mode in order to have sufficient battery to help out during the accelerations. __Overall, using this algorithm, we save 38% of fuel on the NEDC.__ 
 
