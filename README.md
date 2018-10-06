@@ -1,7 +1,7 @@
 # Hybrid vehicles: real-time management of motor coupling
 The aim of this project was to determine how to balance thermal and electric motors in a hybrid vehicle in order to limit petrol consumption. The algorithms were tested on the [New European Driving Cycle (NEDC)](https://en.wikipedia.org/wiki/New_European_Driving_Cycle) using the characteristics of a Renault Clio iii (2) collection 1.2 16v 75 zen 3p (Citadines). The NEDC is designed to assess car engine emission levels and fuel economy in passenger cars.
 
-<img src="IMG/New_European_Driving_Cycle.png" width="300/">
+<img src="IMG/New_European_Driving_Cycle.png" width="500/">
 
 ## Why use a hybrid vehicle?
 |               | Combustion engine       | Electric motors                     |
@@ -17,7 +17,7 @@ Combining a combustion engine with an electric motor gets the best of both world
 
 In particular, whilst electric motors are efficient at low speeds, combustion engines are better at high speeds as evidence by the following diagram displaying energy consumption as a function of the applied torque and rpm. Generally speaking, energy consumption is an increasing function of torque and thus of speed assuming the driver stays between 2000 and 3000 rpm as recommended by car manufacturers.
 
-<img src="IMG/Engine_Mapping.png" width="300/">
+<img src="IMG/Engine_mapping.png" width="300/">
 
 ## Algorithm 1 - rule-based workload distribution
 Here we designed a real-time algorithm for balancing the power between the thermal and electic motors. The exact driving path is not known beforehand.
