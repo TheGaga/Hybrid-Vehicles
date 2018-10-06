@@ -1,14 +1,14 @@
-# Hybrid-vehicles
+# Hybrid vehicles: real-time management of motor coupling
 The aim of this project was to determine how to balance thermal and electric motors in a hybrid vehicle in order to limit petrol consumption. The algorithms were tested on the New European Driving Cycle (NEDC) developed in 2014 using the characteristics of a Renault Clio iii (2) collection 1.2 16v 75 zen 3p (Citadines).
 
 ## Why use a hybrid vehicle?
 |               | Combustion engine       | Electric motors                     |
 |---------------|-------------------------|-------------------------------------|
-| Advantages    | Cheap                   | Low pollution and low noise         |
+|__Advantages__ | Cheap                   | Low pollution and low noise         |
 |               | Efficient at high speed | Efficient at low speeds             |
 |               |                         | Instant start                       |
 |               |                         | Long motor life cycle (> 100000 km) |
-| Disadvantages | Pollution               | Low battery autonomy (100km)        |
+|__Disadvantages __| Pollution               | Low battery autonomy (100km)        |
 |               | Loud                    | Low battery life                    |
 
 Combining a combustion engine with an electric motor gets the best of both worlds if done well.
