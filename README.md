@@ -35,7 +35,7 @@ Reduce energy consumption by 30% on a unknown trip.
 #### Rules:
 1. At low speed (v < 50 km/h) – pur electric mode: if possible the electric motor alone is used to avoid the low efficiency regions of the thermal motor
 2. During acceleration - boost mode: both motors work together
-3. At high speed - thermal mode or recharge mode: only the thermic motor operates. If possible (and necessary), the motor can work in over-regime to charge the battery
+3. At high speed (v > 50 km/h)- thermal mode or recharge mode: only the thermic motor operates. If possible (and necessary), the motor can work in over-regime to charge the battery
 4. Braking - regenerative braking: kinetic energy is used to recharge battery
 
 * Battery charge/decharge: battery level cannot go below 10% except in acceleration phase
