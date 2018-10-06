@@ -4,7 +4,6 @@ The aim of this project was to determine how to balance thermal and electric mot
 <img src="IMG/New_European_Driving_Cycle.png" width="600/">
 
 ## Why use a hybrid vehicle?
-<center>
 |               | Combustion engine       | Electric motors                     |
 |---------------|-------------------------|-------------------------------------|
 |__Advantages__ | Cheap                   | Low pollution and low noise         |
@@ -13,7 +12,6 @@ The aim of this project was to determine how to balance thermal and electric mot
 |               |                         | Long motor life cycle (> 100000 km) |
 |__Disadvantages__| Pollution               | Low battery autonomy (100km)        |
 |               | Loud                    | Low battery life                    |
- </center>
 
 Combining a combustion engine with an electric motor gets the best of both worlds if done well.
 
